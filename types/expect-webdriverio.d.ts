@@ -460,6 +460,9 @@ type WdioAsymmetricMatcher<R> = ExpectWebdriverIO.PartialMatcher<R> & {
 }
 
 declare namespace ExpectWebdriverIO {
+    type CustomExpect = WdioCustomExpect
+    type CustomMatchers<R, T> = WdioCustomMatchers<R, T>
+
     /**
      * When importing expect from 'expect-webdriverio', instead of using globals this is the one used.
      * Note: Using a const instead of a function, else we cannot use asymmetric matcher like expect.anything().
